@@ -532,6 +532,234 @@ img { max-width: 100%; display: block; }
   }
 }
 /* ================================
+   DIVISOR ENTRE SECCIONES
+   ================================ */
+.section {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ================================
+   SOBRE MÍ
+   ================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+.about__content p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about__content strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.about__flag { font-size: 18px; }
+
+.about__stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.about__stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+
+.about__stat-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.about__card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__card-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.about__card-item i {
+  font-size: 18px;
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.about__card-item a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.about__card-item a:hover { color: var(--green); }
+
+/* ================================
+   HABILIDADES
+   ================================ */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.skills-group__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  font-family: var(--font-code);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skill-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.skill-card:hover {
+  border-color: var(--green);
+  box-shadow: var(--shadow-green);
+  transform: translateY(-3px);
+}
+
+.skill-card i {
+  font-size: 28px;
+  color: var(--green);
+}
+
+.skill-card span {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ================================
+   PROYECTOS
+   ================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card--featured {
+  grid-column: span 2;
+}
+
+.project-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--green);
+  box-shadow: var(--shadow-green);
+  transform: translateY(-4px);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card__icons i {
+  font-size: 32px;
+  color: var(--green);
+}
+
+.project-card__links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-card__links a {
+  font-size: 20px;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.project-card__links a:hover { color: var(--green); }
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.project-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-card__tags span {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--green);
+  background: var(--green-glow);
+  border: 1px solid rgba(0,255,148,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ================================
    CERTIFICACIONES
    ================================ */
 .certs-grid {
@@ -597,12 +825,6 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .certs-grid {
-    grid-template-columns: 1fr;
-  }
-}
 /* ================================
    CONTACTO
    ================================ */
@@ -641,11 +863,8 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.contact__link:hover {
-  color: var(--green);
-}
+.contact__link:hover { color: var(--green); }
 
-/* Formulario */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -676,8 +895,7 @@ img { max-width: 100%; display: block; }
   padding: 11px 14px;
   outline: none;
   resize: vertical;
-  transition: border-color var(--transition),
-              box-shadow var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .form-group input:focus,
@@ -731,21 +949,24 @@ img { max-width: 100%; display: block; }
   transition: color var(--transition);
 }
 
-.footer__social a:hover {
-  color: var(--green);
-}
+.footer__social a:hover { color: var(--green); }
 
 /* ================================
-   RESPONSIVE CONTACTO Y FOOTER
+   RESPONSIVE GENERAL
    ================================ */
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
 
-  .footer__inner {
-    flex-direction: column;
-    text-align: center;
-  }
+  .about__stats { gap: 20px; }
+
+  .skills-container { grid-template-columns: 1fr; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card--featured { grid-column: span 1; }
+
+  .certs-grid { grid-template-columns: 1fr; }
+
+  .footer__inner { flex-direction: column; text-align: center; }
 }
+
