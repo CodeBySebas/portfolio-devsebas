@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Fondo oscuro -->
+  <rect width="400" height="400" fill="#0A0F1E" rx="200"/>
+
+  <!-- Círculo borde verde neón -->
+  <circle cx="200" cy="200" r="190"
+    fill="none" stroke="#00FF94" stroke-width="6"/>
+
+  <!-- Círculo interior sutil -->
+  <circle cx="200" cy="200" r="160"
+    fill="none" stroke="rgba(0,255,148,0.1)" stroke-width="1"/>
+
+  <!-- Brillo verde arriba -->
+  <radial-gradient id="glow" cx="50%" cy="30%" r="50%">
+    <stop offset="0%" stop-color="rgba(0,255,148,0.15)"/>
+    <stop offset="100%" stop-color="transparent"/>
+  </radial-gradient>
+  <circle cx="200" cy="200" r="190" fill="url(#glow)"/>
+
+  <!-- Letras DS -->
+  <text x="200" y="185"
+    font-family="'Barlow Condensed', Arial, sans-serif"
+    font-size="130" font-weight="800"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="-5">
+    DS
+  </text>
+
+  <!-- Texto DevSebas abajo -->
+  <text x="200" y="240"
+    font-family="'Fira Code', monospace"
+    font-size="28" font-weight="500"
+    fill="#00FF94"
+    text-anchor="middle"
+    letter-spacing="3">
+    DevSebas
+  </text>
+
+  <!-- Línea decorativa -->
+  <line x1="120" y1="258" x2="280" y2="258"
+    stroke="rgba(0,255,148,0.3)" stroke-width="1"/>
+
+  <!-- Texto dev abajo -->
+  <text x="200" y="285"
+    font-family="'Fira Code', monospace"
+    font-size="16" font-weight="400"
+    fill="rgba(255,255,255,0.4)"
+    text-anchor="middle"
+    letter-spacing="4">
+    &lt;/developer&gt;
+  </text>
+
+</svg>
