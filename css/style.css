@@ -1067,3 +1067,52 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 10px rgba(0,255,148,0.8);
   transition: width 0.1s ease;
 }
+/* ================================
+   CURSOR PERSONALIZADO
+   ================================ */
+
+/* Oculta el cursor normal */
+* { cursor: none; }
+a, button, input, textarea, select, label {
+  cursor: none !important;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  box-shadow: 0 0 10px rgba(0,255,148,0.8);
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(0,255,148,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: all 0.12s ease;
+}
+
+.cursor-dot--hover {
+  transform: translate(-50%, -50%) scale(1.8);
+  background: rgba(0,255,148,0.3);
+}
+
+.cursor-follower--hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  border-color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-follower { display: none; }
+  * { cursor: auto; }
+}

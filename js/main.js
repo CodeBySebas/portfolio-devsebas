@@ -123,3 +123,29 @@ window.addEventListener('scroll', () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   scrollProgress.style.width = scrollPercent + '%';
 });
+/* ================================
+   CURSOR PERSONALIZADO
+   ================================ */
+const cursor         = document.getElementById('cursor');
+const cursorFollower = document.getElementById('cursorFollower');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left         = e.clientX + 'px';
+  cursor.style.top          = e.clientY + 'px';
+  cursorFollower.style.left = e.clientX + 'px';
+  cursorFollower.style.top  = e.clientY + 'px';
+});
+
+// Efecto hover en links y botones
+const hoverEls = document.querySelectorAll('a, button, .skill-card, .project-card, .cert-card');
+
+hoverEls.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor-dot--hover');
+    cursorFollower.classList.add('cursor-follower--hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor-dot--hover');
+    cursorFollower.classList.remove('cursor-follower--hover');
+  });
+});
