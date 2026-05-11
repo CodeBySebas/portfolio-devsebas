@@ -150,18 +150,18 @@ hoverEls.forEach(el => {
   });
 });
 /* ================================
-   BARRAS DE PROGRESO ANIMADAS
+   BARRAS DE IDIOMAS ANIMADAS
    ================================ */
-const skillBars = document.querySelectorAll('.skill-bar__fill');
+const langBars = document.querySelectorAll('.language-card__fill');
 
-const skillObserver = new IntersectionObserver((entries) => {
+const langObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const width = entry.target.dataset.width;
       entry.target.style.width = width + '%';
-      skillObserver.unobserve(entry.target);
+      langObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.3 });
 
-skillBars.forEach(bar => skillObserver.observe(bar));
+langBars.forEach(bar => langObserver.observe(bar));

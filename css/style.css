@@ -1119,3 +1119,76 @@ a, button, input, textarea, select, label,
   .cursor-dot, .cursor-follower { display: none; }
   * { cursor: auto; }
 }
+/* ================================
+   IDIOMAS
+   ================================ */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+}
+
+.language-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all var(--transition);
+}
+
+.language-card:hover {
+  border-color: var(--green);
+  box-shadow: var(--shadow-green);
+  transform: translateY(-3px);
+}
+
+.language-card__flag {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.language-card__info {
+  flex: 1;
+}
+
+.language-card__info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.language-card__level {
+  font-size: 12px;
+  color: var(--green);
+  font-family: var(--font-code);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.language-card__bar {
+  background: var(--border);
+  border-radius: 20px;
+  height: 5px;
+  overflow: hidden;
+}
+
+.language-card__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green) 0%, #00CC75 100%);
+  border-radius: 20px;
+  transition: width 1.2s ease;
+  box-shadow: 0 0 8px rgba(0,255,148,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+}
