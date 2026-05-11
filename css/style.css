@@ -1073,7 +1073,10 @@ img { max-width: 100%; display: block; }
 
 /* Oculta el cursor normal */
 * { cursor: none; }
-a, button, input, textarea, select, label {
+a, button, input, textarea, select, label,
+.skill-card, .project-card, .cert-card,
+.btn, .nav-links a, .hero__social a,
+.contact__link, .footer__social a {
   cursor: none !important;
 }
 

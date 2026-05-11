@@ -149,3 +149,19 @@ hoverEls.forEach(el => {
     cursorFollower.classList.remove('cursor-follower--hover');
   });
 });
+/* ================================
+   BARRAS DE PROGRESO ANIMADAS
+   ================================ */
+const skillBars = document.querySelectorAll('.skill-bar__fill');
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const width = entry.target.dataset.width;
+      entry.target.style.width = width + '%';
+      skillObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+skillBars.forEach(bar => skillObserver.observe(bar));
