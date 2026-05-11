@@ -1053,4 +1053,17 @@ img { max-width: 100%; display: block; }
     order: -1;
   }
 }
-
+/* ================================
+   SCROLL PROGRESS BAR
+   ================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--green);
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0,255,148,0.8);
+  transition: width 0.1s ease;
+}
