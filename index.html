@@ -17,6 +17,11 @@
   <!-- Tu CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+<body>
+<canvas class="hero__matrix" id="heroMatrix"></canvas>
+<div class="hero__scanlines"></div>
+
+<!-- ===== CURSOR ===== -->
 
 <!-- ===== CURSOR ===== -->
   <div class="cursor-dot" id="cursor"></div>
@@ -33,16 +38,18 @@
         DevSebas
         <span class="logo__bracket">/&gt;</span>
       </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#certificaciones">Certificaciones</a>
-        <a href="#idiomas">Idiomas</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="nav-links" id="navLinks">
+     <a href="#sobre-mi" data-i18n="nav_sobre">Sobre mí</a>
+     <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
+     <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+     <a href="#certificaciones" data-i18n="nav_certs">Certificaciones</a>
+     <a href="#idiomas" data-i18n="nav_idiomas">Idiomas</a>
+     <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+    </nav>
       </nav>
+      <button class="lang-toggle" id="langToggle">ES / EN</button>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-        <i class="ti ti-menu-2"></i>
+      <i class="ti ti-menu-2"></i>
       </button>
     </div>
   </header>
@@ -69,24 +76,23 @@
 
       <!-- Contenido izquierda -->
       <div class="hero__content">
-        <p class="hero__greeting">Hola, mi nombre es</p>
+        <p class="hero__greeting" data-i18n="hero_greeting">Hola, mi nombre es</p>
         <h1 class="hero__name">Sebastian Rodriguez</h1>
         <h2 class="hero__role">
-          <span class="hero__role-prefix">Soy </span>
+          <span class="hero__role-prefix" data-i18n="hero_role_prefix">Soy </span>
           <span class="typewriter" id="typewriter"></span>
           <span class="cursor">|</span>
         </h2>
-        <p class="hero__desc">
-          Desarrollador Full Stack Junior desde 
-          <span class="hero__flag">🇩🇴</span> República Dominicana. 
-          Apasionado por construir soluciones reales con código limpio.
-        </p>
+        <p class="hero__desc" data-i18n="hero_desc">
+         Desarrollador Full Stack Junior desde 🇩🇴 República Dominicana. 
+        Apasionado por construir soluciones reales con código limpio.
+         </p>
         <div class="hero__btns">
-          <a href="#proyectos" class="btn btn--primary btn--lg">
-            Ver proyectos →
+          <a href="#proyectos" class="btn btn--primary btn--lg" data-i18n="hero_btn_proyectos">
+          Ver proyectos →
           </a>
-          <a href="#contacto" class="btn btn--outline btn--lg">
-            Contáctame
+          <a href="#contacto" class="btn btn--outline btn--lg" data-i18n="hero_btn_contacto">
+          Contáctame
           </a>
         </div>
         <div class="hero__social">
@@ -114,45 +120,44 @@
   <section class="section" id="sobre-mi">
     <div class="container">
 
-      <span class="section__tag">// sobre_mi.js</span>
-      <h2 class="section__title">Sobre mí</h2>
+      <span class="section__tag" data-i18n="sobre_tag">// sobre_mi.js</span>
+      <h2 class="section__title" data-i18n="sobre_title">Sobre mí</h2>
 
       <div class="about-grid">
 
         <!-- Texto -->
         <div class="about__content">
-          <p>
-            Soy <strong>Sebastian Rodriguez</strong>, desarrollador 
-            Full Stack Junior desde 
-            <span class="about__flag">🇩🇴</span> República Dominicana 
-            con <strong>3 años de experiencia</strong> construyendo 
-            soluciones reales con código limpio y eficiente.
+          <p data-i18n="sobre_p1">
+           Soy <strong>Sebastian Rodriguez</strong>, desarrollador 
+           Full Stack Junior desde 🇩🇴 República Dominicana 
+           con <strong>3 años de experiencia</strong> construyendo 
+           soluciones reales con código limpio y eficiente.
           </p>
-          <p>
-            Me especializo en <strong>Backend</strong> con Python y Flask, 
-            manejo de bases de datos con <strong>SQL Server y MySQL</strong>, 
-            y tengo bases sólidas en <strong>ciberseguridad</strong> y 
-            desarrollo Frontend.
-          </p>
-          <p>
-            Actualmente cursando <strong>Ingeniería en Ciencias 
-            Computacionales</strong> en UTESA mientras trabajo en 
-            proyectos reales que me desafían a crecer cada día.
-          </p>
+          <p data-i18n="sobre_p2">
+           Me especializo en <strong>Backend</strong> con Python y Flask, 
+           manejo de bases de datos con <strong>SQL Server y MySQL</strong>, 
+           y tengo bases sólidas en <strong>ciberseguridad</strong> y 
+           desarrollo Frontend.
+           </p>
+           <p data-i18n="sobre_p3">
+           Actualmente cursando <strong>Ingeniería en Ciencias 
+           Computacionales</strong> en UTESA mientras trabajo en 
+           proyectos reales que me desafían a crecer cada día.
+           </p>
 
           <!-- Stats -->
           <div class="about__stats">
             <div class="about__stat">
               <span class="about__stat-num">3+</span>
-              <span class="about__stat-label">Años programando</span>
+              <span class="about__stat-label" data-i18n="sobre_stat1">Años programando</span>
             </div>
             <div class="about__stat">
               <span class="about__stat-num">7+</span>
-              <span class="about__stat-label">Certificaciones</span>
+              <span class="about__stat-label" data-i18n="sobre_stat2">Certificaciones</span>
             </div>
             <div class="about__stat">
               <span class="about__stat-num">10+</span>
-              <span class="about__stat-label">Proyectos</span>
+              <span class="about__stat-label" data-i18n="sobre_stat3">Proyectos</span>
             </div>
           </div>
         </div>
@@ -161,15 +166,15 @@
         <div class="about__card">
           <div class="about__card-item">
             <i class="ti ti-map-pin"></i>
-            <span>República Dominicana</span>
+            <span data-i18n="sobre_card_ubicacion">República Dominicana</span>
           </div>
           <div class="about__card-item">
             <i class="ti ti-school"></i>
-            <span>Estudiante de Ing. Ciencias Computacionales — UTESA</span>
+            <span data-i18n="sobre_card_escuela">Estudiante de Ing. Ciencias Computacionales — UTESA</span>
           </div>
           <div class="about__card-item">
             <i class="ti ti-briefcase"></i>
-            <span>Disponible para proyectos freelance</span>
+            <span data-i18n="sobre_card_disponible">Disponible para proyectos freelance</span>
           </div>
           <div class="about__card-item">
             <i class="ti ti-mail"></i>
@@ -184,9 +189,9 @@
             </a>
           </div>
           <a href="mailto:sr.mariano13@gmail.com" 
-          class="btn btn--primary btn--full" style="margin-top: 16px;">
-            Contrátame →
-          </a>
+           class="btn btn--primary btn--full" style="margin-top: 16px;" data-i18n="sobre_btn">
+           Contrátame →
+           </a>
         </div>
 
       </div>
@@ -196,16 +201,16 @@
   <section class="section" id="habilidades" style="background: var(--navy-mid);">
     <div class="container">
 
-      <span class="section__tag">// habilidades.js</span>
-      <h2 class="section__title">Habilidades</h2>
+      <span class="section__tag" data-i18n="skills_tag">// habilidades.js</span>
+      <h2 class="section__title" data-i18n="skills_title">Habilidades</h2>
 
       <div class="skills-container">
 
         <!-- Frontend -->
         <div class="skills-group">
-          <h3 class="skills-group__title">
-            <i class="ti ti-browser"></i> Frontend
-          </h3>
+          <h3 class="skills-group__title" data-i18n="skills_frontend">
+          <i class="ti ti-browser"></i> Frontend
+         </h3>
           <div class="skills-grid">
             <div class="skill-card">
               <i class="ti ti-brand-html5"></i>
@@ -224,8 +229,8 @@
 
         <!-- Backend -->
         <div class="skills-group">
-          <h3 class="skills-group__title">
-            <i class="ti ti-server"></i> Backend
+          <h3 class="skills-group__title" data-i18n="skills_backend">
+          <i class="ti ti-server"></i> Backend
           </h3>
           <div class="skills-grid">
             <div class="skill-card">
@@ -245,8 +250,8 @@
 
         <!-- Bases de datos -->
         <div class="skills-group">
-          <h3 class="skills-group__title">
-            <i class="ti ti-database"></i> Bases de datos
+          <h3 class="skills-group__title" data-i18n="skills_db">
+          <i class="ti ti-database"></i> Bases de datos
           </h3>
           <div class="skills-grid">
             <div class="skill-card">
@@ -266,7 +271,7 @@
 
         <!-- Herramientas -->
         <div class="skills-group">
-          <h3 class="skills-group__title">
+          <h3 class="skills-group__title" data-i18n="skills_tools">
             <i class="ti ti-tools"></i> Herramientas
           </h3>
           <div class="skills-grid">
@@ -287,21 +292,21 @@
 
         <!-- Ciberseguridad -->
         <div class="skills-group">
-          <h3 class="skills-group__title">
+          <h3 class="skills-group__title" data-i18n="skills_cybersecurity">
             <i class="ti ti-shield"></i> Ciberseguridad
           </h3>
           <div class="skills-grid">
             <div class="skill-card">
               <i class="ti ti-shield-check"></i>
-              <span>Gestión de riesgos</span>
+              <span data-i18n="skills_cyber1">Gestión de riesgos</span>
             </div>
             <div class="skill-card">
               <i class="ti ti-bug"></i>
-              <span>Análisis de vulnerabilidades</span>
-            </div>
+              <span data-i18n="skills_cyber2">Análisis de vulnerabilidades</span>
+              </div>
             <div class="skill-card">
               <i class="ti ti-shield-lock"></i>
-              <span>Cyber Threat</span>
+              <span data-i18n="skills_cyber3">Cyber Threat</span>
             </div>
           </div>
         </div>
@@ -311,8 +316,8 @@
   <section class="section" id="proyectos">
     <div class="container">
 
-      <span class="section__tag">// proyectos.js</span>
-      <h2 class="section__title">Proyectos</h2>
+      <span class="section__tag" data-i18n="proyectos_tag">// proyectos.js</span>
+      <h2 class="section__title" data-i18n="proyectos_title">Proyectos</h2>
 
       <div class="projects-grid">
 
@@ -334,10 +339,10 @@
             </div>
           </div>
           <h3 class="project-card__title">Mudanzas Soriano</h3>
-          <p class="project-card__desc">
-            Landing page profesional para empresa de mudanzas en Chile. 
-            Diseño mobile-first con animaciones, contador animado, 
-            galería de fotos y formulario integrado con WhatsApp.
+          <p class="project-card__desc" data-i18n="proyecto1_desc">
+           Landing page profesional para empresa de mudanzas en Chile. 
+           Diseño mobile-first con animaciones, contador animado, 
+           galería de fotos y formulario integrado con WhatsApp.
           </p>
           <div class="project-card__tags">
             <span>HTML</span>
@@ -361,11 +366,11 @@
     </div>
   </div>
   <h3 class="project-card__title">Gestor de Contactos</h3>
-  <p class="project-card__desc">
-    Sistema automatizado para limpiar, unificar y procesar 
-    contactos desde múltiples fuentes Excel. Incluye 
-    deduplicación, filtro de spam y generación de gráficas 
-    automáticas.
+  <p class="project-card__desc" data-i18n="proyecto2_desc">
+  Sistema automatizado para limpiar, unificar y procesar 
+  contactos desde múltiples fuentes Excel. Incluye 
+  deduplicación, filtro de spam y generación de gráficas 
+  automáticas.
   </p>
   <div class="project-card__tags">
     <span>Python</span>
@@ -388,10 +393,10 @@
               </a>
             </div>
           </div>
-          <h3 class="project-card__title">Próximo proyecto</h3>
-          <p class="project-card__desc">
-            Más proyectos en camino. El aprendizaje no para 🚀
-          </p>
+          <h3 class="project-card__title" data-i18n="proyecto3_title">Próximo proyecto</h3>
+          <p class="project-card__desc" data-i18n="proyecto3_desc">
+           Más proyectos en camino. El aprendizaje no para 🚀
+           </p>
           <div class="project-card__tags">
             <span>C#</span>
             <span>SQL Server</span>
@@ -405,8 +410,8 @@
   <section class="section" id="certificaciones" style="background: var(--navy-mid);">
     <div class="container">
 
-      <span class="section__tag">// certificaciones.js</span>
-      <h2 class="section__title">Certificaciones</h2>
+      <span class="section__tag" data-i18n="certs_tag">// certificaciones.js</span>
+      <h2 class="section__title" data-i18n="certs_title">Certificaciones</h2>
 
       <div class="certs-grid">
 
@@ -415,7 +420,7 @@
             <i class="ti ti-database"></i>
           </div>
           <div class="cert-card__info">
-            <h3>Databases and SQL for Data Science with Python</h3>
+            <h3 data-i18n="cert1_title">Databases and SQL for Data Science with Python</h3>
             <span class="cert-card__issuer">IBM / Coursera</span>
             <span class="cert-card__year">2026</span>
           </div>
@@ -484,16 +489,16 @@
   <section class="section" id="idiomas">
     <div class="container">
 
-      <span class="section__tag">// idiomas.js</span>
-      <h2 class="section__title">Idiomas</h2>
+      <span class="section__tag" data-i18n="idiomas_tag">// idiomas.js</span>
+      <h2 class="section__title" data-i18n="idiomas_title">Idiomas</h2>
 
       <div class="languages-grid">
 
         <div class="language-card">
           <div class="language-card__flag">🇩🇴</div>
           <div class="language-card__info">
-            <h3>Español</h3>
-            <span class="language-card__level">Nativo</span>
+            <h3 data-i18n="idioma1">Español</h3>
+            <span class="language-card__level" data-i18n="idioma1_level">Nativo</span>
             <div class="language-card__bar">
               <div class="language-card__fill" data-width="100"></div>
             </div>
@@ -503,8 +508,8 @@
         <div class="language-card">
           <div class="language-card__flag">🇺🇸</div>
           <div class="language-card__info">
-            <h3>Inglés</h3>
-            <span class="language-card__level">Técnico básico</span>
+            <h3 data-i18n="idioma2">Inglés</h3>
+            <span class="language-card__level" data-i18n="idioma2_level">Técnico básico</span>
             <div class="language-card__bar">
               <div class="language-card__fill" data-width="45"></div>
             </div>
@@ -519,18 +524,17 @@
   <section class="section" id="contacto">
     <div class="container">
 
-      <span class="section__tag">// contacto.js</span>
-      <h2 class="section__title">Contacto</h2>
-
+      <span class="section__tag" data-i18n="contacto_tag">// contacto.js</span>
+      <h2 class="section__title" data-i18n="contacto_title">Contacto</h2>
       <div class="contact-grid">
 
         <!-- Texto izquierda -->
         <div class="contact__content">
-          <p>
-            ¿Tienes un proyecto en mente o quieres trabajar juntos? 
-            Estoy disponible para proyectos freelance y oportunidades 
-            laborales. ¡Hablemos!
-          </p>
+            <p data-i18n="contacto_desc">
+           ¿Tienes un proyecto en mente o quieres trabajar juntos? 
+           Estoy disponible para proyectos freelance y oportunidades 
+           laborales. ¡Hablemos!
+           </p>
           <div class="contact__links">
             <a href="mailto:sr.mariano13@gmail.com" class="contact__link">
               <i class="ti ti-mail"></i>
@@ -552,22 +556,21 @@
         <!-- Formulario derecha -->
         <form class="contact-form" id="contactForm">
           <div class="form-group">
-            <label for="nombre">Nombre</label>
+            <label for="nombre" data-i18n="contacto_nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" 
-            placeholder="Tu nombre" required />
-          </div>
+            data-i18n-ph="contacto_nombre_ph" placeholder="Tu nombre" required /> 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="contacto_email">Email</label>
             <input type="email" id="email" name="email" 
-            placeholder="tu@email.com" required />
+           data-i18n-ph="contacto_email_ph" placeholder="tu@email.com" required />
           </div>
           <div class="form-group">
-            <label for="mensaje">Mensaje</label>
+            <label for="mensaje" data-i18n="contacto_mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" rows="4" 
-            placeholder="Cuéntame sobre tu proyecto..."></textarea>
+            data-i18n-ph="contacto_mensaje_ph" placeholder="Cuéntame sobre tu proyecto..."></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">
-            Enviar mensaje →
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="contacto_btn">
+           Enviar mensaje →
           </button>
         </form>
 
@@ -583,10 +586,9 @@
         DevSebas
         <span class="logo__bracket">/&gt;</span>
       </div>
-      <p class="footer__copy">
-        © 2026 Sebastian Rodriguez · Desarrollado con 
-        <span style="color: var(--green);">❤</span> en RD
-      </p>
+      <p class="footer__copy" data-i18n="footer_copy">
+       © 2026 Sebastian Rodriguez · Desarrollado con ❤ en RD
+       </p>
       <div class="footer__social">
         <a href="https://github.com/CodeBySebas" target="_blank">
           <i class="ti ti-brand-github"></i>
@@ -601,12 +603,9 @@
       </div>
     </div>
   </footer>
-<body>
-<canvas class="hero__matrix" id="heroMatrix"></canvas>
-<div class="hero__scanlines"></div>
+</footer>
 
-  <!-- Aquí irá todo el contenido -->
-
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
-<body>
+</body>
 </html>

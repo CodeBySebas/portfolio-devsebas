@@ -1238,3 +1238,23 @@ a, button, input, textarea, select, label,
 @media (max-width: 768px) {
   .hero__snippet { display: none; }
 }
+
+/* ===== LANG TOGGLE ===== */
+.lang-toggle {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+
+.lang-toggle:hover {
+  background: var(--green);
+  color: var(--navy);
+}
