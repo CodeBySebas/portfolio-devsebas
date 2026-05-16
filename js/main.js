@@ -165,3 +165,40 @@ const langObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 langBars.forEach(bar => langObserver.observe(bar));
+
+// ===== HERO MATRIX =====
+const canvas = document.getElementById('heroMatrix');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const chars = '01アイウエオカキクケコ{}[]<>/\\;def return import class const let var SELECT FROM WHERE';
+const charArr = chars.split('');
+const fontSize = 13;
+const cols = Math.floor(canvas.width / fontSize);
+const drops = Array(cols).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = 'rgba(10, 15, 30, 0.05)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = '#00ff94';
+  ctx.font = fontSize + 'px Fira Code, monospace';
+
+  for (let i = 0; i < drops.length; i++) {
+    const char = charArr[Math.floor(Math.random() * charArr.length)];
+    ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(drawMatrix, 45);
