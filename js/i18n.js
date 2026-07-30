@@ -73,7 +73,7 @@ const translations = {
     contacto_btn: 'Enviar mensaje →',
 
     // Footer
-    footer_copy: '© 2026 Sebastian Rodriguez · Desarrollado con ❤ en RD',
+    footer_copy: '© 2026 Sebastian Rodriguez · Desarrollado en RD DevSebas · Todos los derechos reservados',
   },
 
   en: {
@@ -151,7 +151,7 @@ const translations = {
     contacto_btn: 'Send message →',
 
     // Footer
-    footer_copy: '© 2026 Sebastian Rodriguez · Developed with ❤ in DR',
+    footer_copy: '© 2026 Sebastian Rodriguez · Developed in DR DevSebas · All rights reserved',
   }
 };
 
