@@ -913,7 +913,7 @@ img { max-width: 100%; display: block; }
    FOOTER
    ================================ */
 .footer {
-  background: var(--navy-mid);
+  background: transparent;
   border-top: 1px solid var(--border);
   padding: 32px 0;
 }
